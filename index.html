@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Harishankar Kumar Harsh - Full Stack Developer specializing in .NET, Angular, and scalable distributed systems. Portfolio showcasing projects and experience.">
+  <meta name="keywords" content="Full Stack Developer, .NET Core, Angular, Blazor, Software Engineer, Portfolio">
+  <meta name="author" content="Harishankar Kumar Harsh">
+  <title>Harishankar Kumar Harsh | Full Stack Developer</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="page-loader">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">Loading</div>
+  </div>
+
+  <!-- Background Effects -->
+  <div class="bg-noise"></div>
+  <div class="bg-gradient-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="nav-logo">HK<span>.dev</span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#education" class="nav-link" data-section="education">Education</a>
+        <a href="#contact" class="nav-cta magnetic-btn">Let's Talk</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero section" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-badge reveal">
+            <span class="dot"></span>
+            Available for opportunities
+          </div>
+          <p class="hero-greeting reveal stagger-1">Hello, I'm</p>
+          <h1 class="hero-name reveal stagger-2">
+            Harishankar<br>
+            <span class="gradient-text">Kumar Harsh</span>
+          </h1>
+          <p class="hero-title reveal stagger-3">
+            <span class="typed-text" id="typed-text"></span>
+          </p>
+          <p class="hero-description reveal stagger-4">
+            Passionate Software Engineer specializing in building scalable, full-stack applications with .NET Core, Angular, and modern cloud technologies. Turning complex problems into elegant solutions.
+          </p>
+          <div class="hero-actions reveal stagger-5">
+            <a href="#projects" class="btn-primary magnetic-btn">
+              <span>View My Work</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn-secondary magnetic-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Contact Me</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual reveal-right">
+          <div class="hero-avatar-wrapper">
+            <div class="hero-avatar-ring"></div>
+            <div class="hero-avatar" id="hero-avatar">HK</div>
+            <div class="hero-float-card">
+              <span class="icon">⚡</span>
+              <span>Full Stack Developer</span>
+            </div>
+            <div class="hero-float-card">
+              <span class="icon">🔧</span>
+              <span>.NET Core Expert</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Side Socials -->
+    <div class="hero-socials">
+      <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+      <a href="mailto:harshchauhan101202@gmail.com" class="social-link" aria-label="Email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">
+          <span>01</span>
+          <span>About Me</span>
+        </div>
+        <h2 class="section-title reveal stagger-1">
+          Get to <span class="gradient-text">Know Me</span>
+        </h2>
+        <p class="section-subtitle reveal stagger-2">
+          A dedicated developer passionate about crafting robust solutions
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal-left">
+          <div class="about-image">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-number counter" data-target="3">0</div>
+              <div class="stat-label">Years Exp</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number counter" data-target="7">0</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number counter" data-target="3">0</div>
+              <div class="stat-label">Companies</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">8.52</div>
+              <div class="stat-label">CGPA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal-right">
+          <h3>Software Engineer Crafting <span class="text-shimmer">Scalable Solutions</span></h3>
+          <p>
+            I'm a passionate Full Stack Developer with expertise in building enterprise-grade applications. With a strong foundation in .NET technologies and modern frontend frameworks, I specialize in creating applications that are not just functional, but scalable, maintainable, and performant.
+          </p>
+          <p>
+            My journey spans across multiple companies where I've contributed to diverse projects — from hybrid desktop applications and driver management systems to SaaS dashboards and real-time chat applications. I thrive on solving complex problems and delivering high-quality solutions.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="icon">🎯</span>
+              <span>Backend Architecture</span>
+            </div>
+            <div class="highlight-item">
+              <span class="icon">💡</span>
+              <span>API Development</span>
+            </div>
+            <div class="highlight-item">
+              <span class="icon">🚀</span>
+              <span>Cloud Deployment</span>
+            </div>
+            <div class="highlight-item">
+              <span class="icon">⚡</span>
+              <span>Performance Optimization</span>
+            </div>
+            <div class="highlight-item">
+              <span class="icon">🔧</span>
+              <span>Microservices</span>
+            </div>
+            <div class="highlight-item">
+              <span class="icon">📊</span>
+              <span>Database Design</span>
+            </div>
+            <div class="highlight-item">
+              <span class="icon">🤖</span>
+              <span>AI & Automation</span>
+            </div>
+            <div class="highlight-item">
+              <span class="icon">☁️</span>
+              <span>Azure Services</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">
+          <span>02</span>
+          <span>Skills</span>
+        </div>
+        <h2 class="section-title reveal stagger-1">
+          My <span class="gradient-text">Tech Stack</span>
+        </h2>
+        <p class="section-subtitle reveal stagger-2">
+          Technologies and tools I use to bring ideas to life
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Languages & Frameworks -->
+        <div class="skill-category reveal stagger-1 tilt-card">
+          <div class="skill-category-icon">💻</div>
+          <h3>Languages & Frameworks</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">.NET Core</span>
+            <span class="skill-tag">ASP.NET</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Blazor</span>
+            <span class="skill-tag">jQuery</span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-category reveal stagger-2 tilt-card">
+          <div class="skill-category-icon">🗄️</div>
+          <h3>Databases & Storage</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">SQL Server</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">PG Vector</span>
+            <span class="skill-tag">Qdrant</span>
+            <span class="skill-tag">NoSQL</span>
+            <span class="skill-tag">SQLite</span>
+            <span class="skill-tag">Entity Framework</span>
+            <span class="skill-tag">ADO.NET</span>
+            <span class="skill-tag">Dapper</span>
+          </div>
+        </div>
+
+        <!-- DevOps & Cloud -->
+        <div class="skill-category reveal stagger-3 tilt-card">
+          <div class="skill-category-icon">☁️</div>
+          <h3>DevOps & Cloud</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Azure DevOps</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Nginx</span>
+            <span class="skill-tag">Lambda</span>
+            <span class="skill-tag">EC2</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Hangfire</span>
+          </div>
+        </div>
+
+        <!-- Azure & Platform Services -->
+        <div class="skill-category reveal stagger-4 tilt-card">
+          <div class="skill-category-icon">🔷</div>
+          <h3>Azure & Platform Services</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Azure DI</span>
+            <span class="skill-tag">Azure Functions</span>
+            <span class="skill-tag">Azure App Service</span>
+            <span class="skill-tag">Azure SQL</span>
+            <span class="skill-tag">Azure Blob Storage</span>
+            <span class="skill-tag">Azure Key Vault</span>
+            <span class="skill-tag">Azure Service Bus</span>
+            <span class="skill-tag">Azure Monitor</span>
+          </div>
+        </div>
+
+        <!-- Architecture -->
+        <div class="skill-category reveal stagger-5 tilt-card">
+          <div class="skill-category-icon">🏗️</div>
+          <h3>Architecture & Patterns</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Microservices</span>
+            <span class="skill-tag">Distributed Systems</span>
+            <span class="skill-tag">DDD</span>
+            <span class="skill-tag">MVC</span>
+            <span class="skill-tag">RESTful APIs</span>
+            <span class="skill-tag">OOPS</span>
+            <span class="skill-tag">MCP</span>
+            <span class="skill-tag">A2A</span>
+          </div>
+        </div>
+
+        <!-- AI & Workflow Automation -->
+        <div class="skill-category reveal stagger-6 tilt-card">
+          <div class="skill-category-icon">🤖</div>
+          <h3>AI & Workflow Automation</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Claude AI</span>
+            <span class="skill-tag">Foundry Models</span>
+            <span class="skill-tag">n8n</span>
+            <span class="skill-tag">MCP Servers</span>
+            <span class="skill-tag">AI Tool Integration</span>
+            <span class="skill-tag">Monitoring Automation</span>
+            <span class="skill-tag">Workflow Orchestration</span>
+            <span class="skill-tag">AI Chatbots</span>
+            <span class="skill-tag">LLM Integration</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category reveal stagger-1 tilt-card">
+          <div class="skill-category-icon">🔨</div>
+          <h3>Tools & Platforms</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">FileZilla</span>
+            <span class="skill-tag">PuTTY</span>
+            <span class="skill-tag">Swagger</span>
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">IIS Server</span>
+            <span class="skill-tag">Linux (Ubuntu)</span>
+            <span class="skill-tag">SignalR</span>
+            <span class="skill-tag">Electron</span>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-category reveal stagger-2 tilt-card">
+          <div class="skill-category-icon">🎨</div>
+          <h3>Frontend & UI</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Blazor</span>
+            <span class="skill-tag">Syncfusion</span>
+            <span class="skill-tag">Razor Pages</span>
+            <span class="skill-tag">Bootstrap</span>
+            <span class="skill-tag">Chart.js</span>
+            <span class="skill-tag">Electron</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Experience Section -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">
+          <span>03</span>
+          <span>Experience</span>
+        </div>
+        <h2 class="section-title reveal stagger-1">
+          Work <span class="gradient-text">Experience</span>
+        </h2>
+        <p class="section-subtitle reveal stagger-2">
+          My professional journey building scalable solutions
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- Current Role -->
+        <div class="timeline-item" id="timeline-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Dec 2025 – Present
+            </div>
+            <h3 class="timeline-role">Software Engineer</h3>
+            <div class="timeline-company">Ariel Software Solutions Pvt. Ltd.</div>
+            <div class="timeline-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Mohali, Chandigarh, India
+            </div>
+            <ul class="timeline-details">
+              <li>Software Engineer specializing in .NET technologies, building scalable applications using ASP.NET Core, Angular, and Blazor.</li>
+              <li>Developed end-to-end full-stack solutions with SQL Server, Entity Framework, and modern UI components for dashboards and reporting.</li>
+              <li>Leveraged AWS (EC2), Redis caching, Docker containerization, and Nginx for performance, scalability, and deployment.</li>
+              <li>Implemented background services, managed deployments via SSH, and ensured high availability, reliability, and optimized system performance.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Brucode -->
+        <div class="timeline-item" id="timeline-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Jun 2025 – Nov 2025
+            </div>
+            <h3 class="timeline-role">Full Stack Developer</h3>
+            <div class="timeline-company">Brucode Technologies Pvt. Ltd.</div>
+            <div class="timeline-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Mohali, Chandigarh, India
+            </div>
+            <ul class="timeline-details">
+              <li>Developed backend services in .NET Core (MVC) with SQL Server, Entity Framework (Code First), and Swagger APIs.</li>
+              <li>Built frontend modules using Syncfusion UI components, delivering dashboards and reporting features.</li>
+              <li>Implemented worker threads & background services for CLS (UK‑based driver/delivery management system).</li>
+              <li>Deployed on the company's own data center, managed servers via SSH (PuTTY), ensuring scalability and reliability.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Revocept -->
+        <div class="timeline-item" id="timeline-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Jul 2023 – Feb 2025
+            </div>
+            <h3 class="timeline-role">Full Stack Developer</h3>
+            <div class="timeline-company">Revocept Solutions</div>
+            <div class="timeline-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Mohali, Chandigarh, India
+            </div>
+            <ul class="timeline-details">
+              <li>Developed and maintained backend services using .NET Core, designing RESTful APIs to integrate with Angular and Electron-based frontend applications.</li>
+              <li>Worked on a hybrid desktop application that operates both online and offline, helping studios manage budgets, track expenses, calculate taxes, and handle incentives.</li>
+              <li>Implemented API integrations for real-time and offline data synchronization, ensuring smooth transitions between modes.</li>
+              <li>Deployed applications on AWS and configured SSH access using PuTTY for remote server management and troubleshooting.</li>
+              <li>Contributed to the development and optimization of scalable architecture, improving system performance and reliability.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">
+          <span>04</span>
+          <span>Projects</span>
+        </div>
+        <h2 class="section-title reveal stagger-1">
+          Featured <span class="gradient-text">Projects</span>
+        </h2>
+        <p class="section-subtitle reveal stagger-2">
+          Showcasing the solutions I've built and the problems I've solved
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- MIB Insurance Broker -->
+        <div class="project-card reveal stagger-1 tilt-card">
+          <div class="project-header">
+            <div class="project-icon">🛡️</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">MIB – Insurance Broker Platform</h3>
+            <p class="project-description">
+              A comprehensive insurance brokerage platform designed to simplify insurance for customers. Features AI-powered chatbot for instant support, workflow automation and orchestration with Hangfire, and a modern Angular frontend with real-time data processing on PostgreSQL.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">.NET 10</span>
+              <span class="tech-tag">Angular 21</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">Hangfire</span>
+              <span class="tech-tag">AI Chatbot</span>
+              <span class="tech-tag">Workflow Orchestration</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hublix.ai -->
+        <div class="project-card reveal stagger-1 tilt-card">
+          <div class="project-header">
+            <div class="project-icon">🚛</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Hublix.ai – CLS Celerity</h3>
+            <p class="project-description">
+              A driver and delivery management system built for a UK-based client to streamline onboarding, tracking, expenses, and incentives. Integrates with DVLA for driver verification and uses background services for automation and data synchronization.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">.NET Core</span>
+              <span class="tech-tag">SQL Server</span>
+              <span class="tech-tag">Syncfusion</span>
+              <span class="tech-tag">MVC</span>
+              <span class="tech-tag">Nginx</span>
+              <span class="tech-tag">DVLA API</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Atlas -->
+        <div class="project-card reveal stagger-2 tilt-card">
+          <div class="project-header">
+            <div class="project-icon">📊</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Atlas – Budget Tracker</h3>
+            <p class="project-description">
+              A budget tracking desktop application designed to help users manage expenses, track totals, calculate taxes, and maintain financial records. Operates in both online and offline modes for seamless functionality.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">.NET Core</span>
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">Electron</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">Nginx</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RackStar -->
+        <div class="project-card reveal stagger-3 tilt-card">
+          <div class="project-header">
+            <div class="project-icon">📦</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">RackStar – Field Operations</h3>
+            <p class="project-description">
+              A field operations management system focused on installing racks at retail outlets and tracking events. Features end-to-end tracking with hierarchical workflow, role-based task assignments, and real-time updates.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">ASP.NET Core</span>
+              <span class="tech-tag">Dapper</span>
+              <span class="tech-tag">SQL Server</span>
+              <span class="tech-tag">Razor Pages</span>
+              <span class="tech-tag">Azure DevOps</span>
+              <span class="tech-tag">IIS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sales Forecasting -->
+        <div class="project-card reveal stagger-4 tilt-card">
+          <div class="project-header">
+            <div class="project-icon">📈</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Sales Forecasting Portal</h3>
+            <p class="project-description">
+              A SaaS-based admin portal enabling users to upload and analyse sales data for forecasting future trends. Integrates Open APIs for predictive analytics with interactive charts and dynamic data visualization.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">ASP.NET Core</span>
+              <span class="tech-tag">SQL Server</span>
+              <span class="tech-tag">Razor Pages</span>
+              <span class="tech-tag">Chart.js</span>
+              <span class="tech-tag">REST APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat App -->
+        <div class="project-card reveal stagger-5 tilt-card">
+          <div class="project-header">
+            <div class="project-icon">💬</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Real-Time Chat App</h3>
+            <p class="project-description">
+              A real-time chat application with interest-based and location-based group creation with admin approval. Features React.js frontend with Redux state management and SignalR for live messaging.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">SignalR</span>
+              <span class="tech-tag">.NET Core</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Redux</span>
+              <span class="tech-tag">Identity</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leave Approval -->
+        <div class="project-card reveal stagger-6 tilt-card">
+          <div class="project-header">
+            <div class="project-icon">📋</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Leave Approval System</h3>
+            <p class="project-description">
+              A structured multi-level leave approval system with role-based access control. Enables organizations to manage leave requests through a hierarchical approval workflow efficiently.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">.NET Core</span>
+              <span class="tech-tag">MVC</span>
+              <span class="tech-tag">SQL Server</span>
+              <span class="tech-tag">Entity Framework</span>
+              <span class="tech-tag">RBAC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Education Section -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">
+          <span>05</span>
+          <span>Education</span>
+        </div>
+        <h2 class="section-title reveal stagger-1">
+          My <span class="gradient-text">Education</span>
+        </h2>
+        <p class="section-subtitle reveal stagger-2">
+          Academic foundation that drives my engineering excellence
+        </p>
+      </div>
+
+      <div class="education-cards">
+        <div class="education-card reveal stagger-1">
+          <div class="education-icon">🎓</div>
+          <div class="education-degree">B.Tech in Computer Science & Engineering</div>
+          <div class="education-school">I.K.G.P.T.U., Jalandhar, Punjab</div>
+          <div class="education-year">Jul 2020 – Jun 2024</div>
+          <div class="education-grade">CGPA: 8.52</div>
+        </div>
+
+        <div class="education-card reveal stagger-2">
+          <div class="education-icon">📚</div>
+          <div class="education-degree">Intermediate (12th Grade)</div>
+          <div class="education-school">RPS College, Mahnar, Bihar</div>
+          <div class="education-year">Passed: 2019</div>
+          <div class="education-grade">76.8%</div>
+        </div>
+
+        <div class="education-card reveal stagger-3">
+          <div class="education-icon">📖</div>
+          <div class="education-degree">Matriculation (10th Grade)</div>
+          <div class="education-school">Utkarmit Madhya Vidyalaya, Gopalpur, Bihar</div>
+          <div class="education-year">Passed: 2017</div>
+          <div class="education-grade">76.4%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">
+          <span>06</span>
+          <span>Contact</span>
+        </div>
+        <h2 class="section-title reveal stagger-1">
+          Let's <span class="gradient-text">Connect</span>
+        </h2>
+        <p class="section-subtitle reveal stagger-2">
+          Have a project in mind or want to collaborate? Feel free to reach out!
+        </p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info reveal-left">
+          <h3>Let's build something <span class="text-shimmer">amazing</span> together</h3>
+          <p>
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Let's connect and make something great!
+          </p>
+
+          <div class="contact-details">
+            <a href="mailto:harshchauhan101202@gmail.com" class="contact-item">
+              <div class="contact-item-icon">📧</div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Email</span>
+                <span class="contact-item-value">harshchauhan101202@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+917061285197" class="contact-item">
+              <div class="contact-item-icon">📱</div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Phone</span>
+                <span class="contact-item-value">+91 7061285197</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="contact-item">
+              <div class="contact-item-icon">🔗</div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">LinkedIn</span>
+                <span class="contact-item-value">Harishankar Kumar Harsh</span>
+              </div>
+            </a>
+            <a href="https://github.com" target="_blank" class="contact-item">
+              <div class="contact-item-icon">💻</div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">GitHub</span>
+                <span class="contact-item-value">GitHub Profile</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form reveal-right">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="form-name">Your Name</label>
+              <input type="text" id="form-name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email">Your Email</label>
+              <input type="email" id="form-email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" placeholder="Project Inquiry">
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit magnetic-btn">
+              Send Message 🚀
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          © 2026 <span>Harishankar Kumar Harsh</span>. Built with passion & code.
+        </div>
+        <div class="footer-socials">
+          <a href="https://linkedin.com" target="_blank" class="footer-social" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com" target="_blank" class="footer-social" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="mailto:harshchauhan101202@gmail.com" class="footer-social" aria-label="Email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <script src="index.js"></script>
+</body>
+</html>
