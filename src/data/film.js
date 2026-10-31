@@ -8,7 +8,7 @@ export const person = {
   base: 'Noida, India',
   email: 'harshchauhan101202@gmail.com',
   github: 'https://github.com/Harishankar02',
-  linkedin: '', // Add your profile URL and the link appears in the finale and the script.
+  linkedin: 'https://www.linkedin.com/in/harishankar02/', // Shown in the finale and the script.
 }
 
 export const certificate = [
