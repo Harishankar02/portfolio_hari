@@ -149,11 +149,11 @@ export const reels = [
     title: 'Now Showing',
     lines: [
       'New city, new chapter: Noida.',
-      'With ThoughtSol, on a vendor role at Jakson Group.',
+      'With ThoughtSol Infotech Ltd., on a vendor role at Jakson Group.',
       'Full stack on .NET and React, shipped on IIS.',
     ],
     slate: [
-      ['Studio', 'ThoughtSol, Noida'],
+      ['Studio', 'ThoughtSol Infotech Ltd.'],
       ['Client', 'Jakson Group (vendor)'],
       ['Role', '.NET Full Stack Developer'],
       ['Dates', '09/2026 — Present'],
@@ -209,7 +209,7 @@ export const resume = {
   experience: [
     {
       role: '.NET Full Stack Developer',
-      company: 'ThoughtSol, Noida (vendor role at Jakson Group)',
+      company: 'ThoughtSol Infotech Ltd., Noida (vendor role at Jakson Group)',
       dates: '09/2026 — Present',
       points: ['Full stack development on .NET and React, deployed on IIS.'],
     },
